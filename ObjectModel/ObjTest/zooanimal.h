@@ -16,5 +16,17 @@ protected:
  	//string name;
 };
 
- 
 
+
+
+void test_ZooAnimal()
+{
+	cout << "ZooAnimal对象的内存大小：" << sizeof(ZooAnimal) << endl;
+
+	cout << endl;
+
+	class NullObject {
+	};
+
+	cout << "空对象的内存大小：" << sizeof(NullObject) << endl;
+}

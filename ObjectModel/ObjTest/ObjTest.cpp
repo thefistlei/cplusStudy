@@ -7,6 +7,7 @@
 #include "TestObj.h"
 #include "point.h"
 #include "zooanimal.h"
+#include "bear.h"
 
 #include <typeinfo>
 
@@ -168,15 +169,7 @@ void test_Point()
 	cout << endl;
 }
 
-void test_ZooAnimal()
-{
-	ZooAnimal za();//在32位计算机上所占内存为16字节 
 
-	cout << "对象za的内存大小：" << sizeof(ZooAnimal) << endl;
-	//ZooAnimal *pza = &za;//pza将横跨地址空间1000~1015
-
-	cout << endl;
-}
 
 int main()
 {
@@ -193,7 +186,10 @@ int main()
 		if (nInput == 1)
 			test_Point();
 		else if (nInput == 2)
-			test_ZooAnimal();
+		{
+			test_ZooAnimal(); 
+			test_Bear();
+		}
 		else if (nInput == 3)
 			test_single_inherit_rewrite();
 		else if (nInput == 31)
