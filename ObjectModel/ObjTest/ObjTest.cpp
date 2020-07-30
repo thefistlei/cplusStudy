@@ -9,6 +9,9 @@
 #include "zooanimal.h"
 #include "bear.h"
 
+
+
+
 #include <typeinfo>
 
 typedef void(*Fun)(void);
@@ -170,6 +173,8 @@ void test_Point()
 }
 
 
+#include "datamemberBinding.h"
+#include "defaultConstructor.h"
 
 int main()
 {
@@ -180,14 +185,16 @@ int main()
 	cout << "3:test single inherit rewrite" << endl;
 	cout << "31:test single inherit noChanged" << endl;
 	cout << "40:test multi inherit" << endl;
-	 
+	cout << "200:test data Member Binding" << endl;
+	cout << "201:test default Constructor" << endl;
+	cout << "202:test default Constructor of object order" << endl;
 	while (cin >> nInput)
 	{
 		if (nInput == 1)
 			test_Point();
 		else if (nInput == 2)
 		{
-			test_ZooAnimal(); 
+			test_ZooAnimal();
 			test_Bear();
 		}
 		else if (nInput == 3)
@@ -196,6 +203,19 @@ int main()
 			test_single_inherit_noChange();
 		else if (nInput == 40)
 			test_multi_inherit_rewrite();
+
+		else if (nInput == 200)
+			dataMemberBinding::test_dataMemberBinding();
+
+		else if (nInput == 201)
+			defaultConstructor::test_defaultConstructor();
+
+		else if (nInput == 202) {
+			defaultConstructor_orderTest::test_defaultConstructor();
+			defaultConstructor_orderTest::test_defaultConstructor_ObjectOrder();
+			defaultConstructor_DeriveTest::test();
+		}
+
 
 		cout << "\nPlease Input number to select operate:\n" << endl;
 	} 

@@ -153,6 +153,8 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="bear.h" />
+    <ClInclude Include="datamemberBinding.h" />
+    <ClInclude Include="defaultConstructor.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="point.h" />
     <ClInclude Include="TestObj.h" />
