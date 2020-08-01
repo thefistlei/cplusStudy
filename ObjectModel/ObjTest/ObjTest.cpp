@@ -175,9 +175,31 @@ void test_Point()
 
 #include "datamemberBinding.h"
 #include "defaultConstructor.h"
+#include "NRVOptimize.h"
+#include "initializationlist.h"
+#include "datamemberPointer.h"
+#include "objectsize.h"
+#include "ObjectConDerived.h"
+#include "ObjectMultiDerived.h"
+#include "ObjectVirtualDerived.h"
 
 int main()
 {
+	objectSize::test();
+	dataMemberGet::test();
+	ObjectConDerived::test();
+	ObjectMultiDerived::test();
+	ObjectVirtualDerived::test();
+
+	InitializationList3::X obj0(100);
+	cout << "val is " << obj0.i << "  " << obj0.j << endl;;
+
+	InitializationList_Order::FooBar obj(100);
+	cout << "val is " << obj.fval() << "  " << obj.getVal() << endl;;
+
+	InitializationList_Order2::X obj2(100);
+	cout << "val is " << obj2.i << endl;;
+
 	int nInput = 0;
 	cout << "Please Input number to select operate:\n" << endl;
 	cout << "1:test Point Object" << endl;
@@ -185,9 +207,11 @@ int main()
 	cout << "3:test single inherit rewrite" << endl;
 	cout << "31:test single inherit noChanged" << endl;
 	cout << "40:test multi inherit" << endl;
-	cout << "200:test data Member Binding" << endl;
-	cout << "201:test default Constructor" << endl;
-	cout << "202:test default Constructor of object order" << endl;
+	cout << "20:test data Member Binding" << endl;
+	cout << "21:test default Constructor" << endl;
+	cout << "22:test default Constructor of object order" << endl;
+	cout << "23:NRVOptimize test" << endl;
+	cout << "24:data membe rPointer test" << endl;	
 	while (cin >> nInput)
 	{
 		if (nInput == 1)
@@ -204,18 +228,21 @@ int main()
 		else if (nInput == 40)
 			test_multi_inherit_rewrite();
 
-		else if (nInput == 200)
+		else if (nInput == 20)
 			dataMemberBinding::test_dataMemberBinding();
 
-		else if (nInput == 201)
+		else if (nInput == 21)
 			defaultConstructor::test_defaultConstructor();
 
-		else if (nInput == 202) {
+		else if (nInput == 22) {
 			defaultConstructor_orderTest::test_defaultConstructor();
 			defaultConstructor_orderTest::test_defaultConstructor_ObjectOrder();
 			defaultConstructor_DeriveTest::test();
 		}
-
+		else if (nInput == 24) {
+			//NRVOptimize::test();
+			dataMemberPointer::test();
+		} 
 
 		cout << "\nPlease Input number to select operate:\n" << endl;
 	} 

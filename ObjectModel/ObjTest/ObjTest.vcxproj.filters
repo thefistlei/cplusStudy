@@ -36,6 +36,27 @@
     <ClInclude Include="defaultConstructor.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="NRVOptimize.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="initializationlist.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="datamemberPointer.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="objectsize.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjectConDerived.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjectMultiDerived.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjectVirtualDerived.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp">
